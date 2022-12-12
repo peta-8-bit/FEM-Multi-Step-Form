@@ -1,0 +1,85 @@
+@import "./colors";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $Light-blue;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  img {
+    width: 100%;
+  }
+}
+
+.step-title {
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+
+  button {
+    border: 0;
+    background-color: transparent;
+    text-decoration: none;
+    box-shadow: none;
+    outline: 2px solid $Pastel-blue;
+    color: $White;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .active-button {
+    background-color: red;
+  }
+
+  button:hover {
+    background-color: $Pastel-blue;
+  }
+}
+
+.step-desktop {
+  display: none;
+}
+
+.form-nav {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  position: absolute;
+  bottom: 0;
+  background-color: $White;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    border: 0;
+    padding: 0.7rem 1rem;
+  }
+}
+
+#next {
+  background-color: $Marine-blue;
+  color: $White;
+}
+
+#back {
+  background-color: transparent;
+  color: $Cool-gray;
+}
+
+.back {
+  display: none;
+}
