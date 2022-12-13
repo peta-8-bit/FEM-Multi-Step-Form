@@ -74,6 +74,60 @@
       <div class="form-container p2 left">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
+
+        <label for="arcade">
+          <span>
+            <img
+              src="./assets/images/icon-arcade.svg"
+              alt="icon for arcade plan"
+            />
+          </span>
+          <span class="list-two">
+            <span>Arcade</span>
+            <span>$9/mo</span>
+          </span>
+        </label>
+        <input type="checkbox" class="hid-checkbox" name="plan" id="arcade" />
+
+        <label for="advanced">
+          <span>
+            <img
+              src="assets/images/icon-advanced.svg"
+              alt="icon for advanced plan"
+            />
+          </span>
+          <span class="list-two">
+            <span>Advanced</span>
+            <span>$12/mo</span>
+          </span>
+        </label>
+        <input type="checkbox" class="hid-checkbox" name="plan" id="advanced" />
+
+        <label for="pro">
+          <span>
+            <img src="./assets/images/icon-pro.svg" alt="icon for pro plan" />
+          </span>
+          <span class="list-two">
+            <span>Pro</span>
+            <span>$15/mo</span>
+          </span>
+        </label>
+        <input type="checkbox" class="hid-checkbox" name="plan" id="pro" />
+
+        <div class=".month">
+          <p>Monthly</p>
+          <label class="switch" for="monthly-switch">
+            <input
+              type="checkbox"
+              id="monthly-switch"
+              name="monthly-switch"
+              value="monthly"
+              onchange="monthly()"
+            />
+            <span class="slider round"></span>
+          </label>
+          <p>Yearly</p>
+        </div>
       </div>
 
       <div class="form-container p3 left">
@@ -82,11 +136,62 @@
           Add-ons help enhance your gaming experience. Online service Access to
           multiplayer games
         </p>
+        <label for="online-service">
+          <input type="checkbox" name="online-service" id="online-service" />
+          <div>
+            <span>Online Service</span>
+            <span>Access to multiplayer games</span>
+          </div>
+          <span id="addon-1">+1$/mo</span>
+        </label>
+
+        <label for="larger-storage">
+          <input type="checkbox" name="larger-storage" id="larger-storage" />
+          <div>
+            <span>Larger storage</span>
+            <span>Extra 1TB of cloud save</span>
+          </div>
+          <span id="addon-2">+2$/mo</span>
+        </label>
+
+        <label for="customizable-profile">
+          <input
+            type="checkbox"
+            name="customizable-profile"
+            id="customizable-profile"
+          />
+          <div>
+            <span>Customizable Profile</span>
+            <span>Custom theme on your profile</span>
+          </div>
+          <span id="addon-3">+2$/mo</span>
+        </label>
       </div>
 
       <div class="form-container p4 left">
         <h1>Finishing up</h1>
         <p>Double-check everything looks OK before confirming.</p>
+        <div>
+          <p class="step4-op">
+            <span class="step4-op-span">
+              <span>Arcade(<span id="bill-frequency"></span>)</span>
+              <a href="#" onclick="change()">change</a>
+            </span>
+            <span id="s4-op1">$9/mo</span>
+          </p>
+          <p class="step4-op">
+            <span>Online service</span>
+            <span id="s4-op2">$1/mo</span>
+          </p>
+          <p class="step4-op">
+            <span>OLarger Storage</span>
+            <span id="s4-op3">$2/mo</span>
+          </p>
+        </div>
+        <p class="step4-op">
+          <span>Total(per <span id="bill-frequency-again"></span>)</span>
+          <span id="s4-op4">$12/mo</span>
+        </p>
       </div>
     </main>
   </body>
