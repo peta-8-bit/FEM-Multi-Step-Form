@@ -137,7 +137,12 @@
           multiplayer games
         </p>
         <label for="online-service">
-          <input type="checkbox" name="online-service" id="online-service" />
+          <input
+            type="checkbox"
+            name="online-service"
+            id="online-service"
+            onchange="monthly()"
+          />
           <div>
             <span>Online Service</span>
             <span>Access to multiplayer games</span>
@@ -146,7 +151,12 @@
         </label>
 
         <label for="larger-storage">
-          <input type="checkbox" name="larger-storage" id="larger-storage" />
+          <input
+            type="checkbox"
+            name="larger-storage"
+            id="larger-storage"
+            onchange="monthly()"
+          />
           <div>
             <span>Larger storage</span>
             <span>Extra 1TB of cloud save</span>
@@ -159,6 +169,7 @@
             type="checkbox"
             name="customizable-profile"
             id="customizable-profile"
+            onchange="monthly()"
           />
           <div>
             <span>Customizable Profile</span>
@@ -177,20 +188,24 @@
               <span>Arcade(<span id="bill-frequency"></span>)</span>
               <a href="#" onclick="change()">change</a>
             </span>
-            <span id="s4-op1">$9/mo</span>
+            <span id="s4-op1"></span>
           </p>
-          <p class="step4-op">
+          <p class="step4-op OS">
             <span>Online service</span>
-            <span id="s4-op2">$1/mo</span>
+            <span id="s4-op2"></span>
           </p>
-          <p class="step4-op">
-            <span>OLarger Storage</span>
-            <span id="s4-op3">$2/mo</span>
+          <p class="step4-op LS">
+            <span>Larger Storage</span>
+            <span id="s4-op3"></span>
+          </p>
+          <p class="step4-op CP">
+            <span>Customizable profile</span>
+            <span id="s4-op4"></span>
           </p>
         </div>
         <p class="step4-op">
           <span>Total(per <span id="bill-frequency-again"></span>)</span>
-          <span id="s4-op4">$12/mo</span>
+          <span id="s4-op5"></span>
         </p>
       </div>
     </main>
