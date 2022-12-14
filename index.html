@@ -84,10 +84,17 @@
           </span>
           <span class="list-two">
             <span>Arcade</span>
-            <span>$9/mo</span>
+            <span id="s2Op1">$9/mo</span>
           </span>
         </label>
-        <input type="checkbox" class="hid-checkbox" name="plan" id="arcade" />
+        <input
+          type="radio"
+          class="hid-checkbox"
+          name="plan"
+          id="arcade"
+          value="Arcade"
+          onchange="monthly()"
+        />
 
         <label for="advanced">
           <span>
@@ -98,10 +105,17 @@
           </span>
           <span class="list-two">
             <span>Advanced</span>
-            <span>$12/mo</span>
+            <span id="s2Op2">$12/mo</span>
           </span>
         </label>
-        <input type="checkbox" class="hid-checkbox" name="plan" id="advanced" />
+        <input
+          type="radio"
+          class="hid-checkbox"
+          name="plan"
+          id="advanced"
+          value="Advanced"
+          onchange="monthly()"
+        />
 
         <label for="pro">
           <span>
@@ -109,10 +123,17 @@
           </span>
           <span class="list-two">
             <span>Pro</span>
-            <span>$15/mo</span>
+            <span id="s2Op3">$15/mo</span>
           </span>
         </label>
-        <input type="checkbox" class="hid-checkbox" name="plan" id="pro" />
+        <input
+          type="radio"
+          class="hid-checkbox"
+          name="plan"
+          id="pro"
+          value="Pro"
+          onchange="monthly()"
+        />
 
         <div class=".month">
           <p>Monthly</p>
@@ -185,7 +206,12 @@
         <div>
           <p class="step4-op">
             <span class="step4-op-span">
-              <span>Arcade(<span id="bill-frequency"></span>)</span>
+              <span>
+                <span id="chosen-plan">Arcade</span>(<span
+                  id="bill-frequency"
+                ></span
+                >)</span
+              >
               <a href="#" onclick="change()">change</a>
             </span>
             <span id="s4-op1"></span>
